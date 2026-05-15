@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌊 Ocean MS English Class 🌊</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Gaegu', cursive;
+            background-color: #fdfcfe; /* Soft background */
+            scroll-behavior: smooth;
+        }
+        .font-pen {
+            font-family: 'Nanum Pen Script', cursive;
+        }
+        .card-pop:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .sea-gradient {
+            background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 100%);
+        }
+        @keyframes swim {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(15px) translateY(-10px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+        .swimming {
+            animation: swim 4s ease-in-out infinite;
+        }
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        /* Logo styling to ensure it fits the nav bar height */
+        .logo-img {
+            height: 44px;
+            width: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <!-- Top Banner -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-sky-100 px-6 py-3 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <!-- 로고 이미지 적용 (경로: ./images/logo.png) -->
+            <img src="./images/logo.png" alt="Ocean English Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            
+            <!-- 이미지 로딩 실패 시 나타날 백업 아이콘 및 텍스트 -->
+            <div class="hidden items-center gap-2">
+                <span class="text-2xl">🐚</span>
+                <span class="font-bold text-xl text-sky-600">Ocean English</span>
+            </div>
+        </div>
+        <div class="hidden md:flex gap-6 text-lg items-center">
+            <a href="#learning" class="hover:text-sky-500 transition-colors">공부하기</a>
+            <a href="#rules" class="hover:text-sky-500 transition-colors">수업약속</a>
+            <a href="#links" class="hover:text-sky-500 transition-colors">바로가기</a>
+            <!-- 질문하기 버튼 -->
+            <a href="https://classroom.google.com/" target="_blank" class="bg-sky-500 text-white px-4 py-1.5 rounded-full text-base font-bold hover:bg-sky-600 transition-all flex items-center gap-2 shadow-sm">
+                <i class="fas fa-comment-dots"></i> 질문하기
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="sea-gradient pt-32 pb-44 relative overflow-hidden text-white">
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 text-4xl swimming opacity-50">🐠</div>
+        <div class="absolute bottom-20 right-20 text-5xl swimming opacity-50" style="animation-delay: 1s;">🐳</div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="inline-block bg-white/30 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-white/50">
+                <span class="text-xl md:text-2xl font-bold">Welcome to 3rd Grade English Class!</span>
+            </div>
+            <h1 class="font-pen text-7xl md:text-9xl mb-6 drop-shadow-lg">
+                안녕! 오션중 3학년 친구들!
+            </h1>
+            <p class="text-2xl md:text-3xl font-light opacity-95 mb-8">
+                오늘도 선생님과 함께 신나게 영어를 즐겨볼까요? 🌊
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#links" class="bg-white text-sky-500 px-8 py-3 rounded-full font-bold text-xl shadow-lg hover:bg-sky-50 transition-all">
+                    수업 도구 바로가기
+                </a>
+            </div>
+        </div>
+
+        <!-- Wave Decoration -->
+        <div class="absolute bottom-0 left-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#fdfcfe" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="links" class="container mx-auto px-6 -mt-24 relative z-20 pb-32">
+        <!-- Dashboard Style Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- ClassCard -->
+            <a href="https://www.classcard.net/" target="_blank" class="card-pop bg-white rounded-[2.5rem] p-8 shadow-xl border-t-8 border-orange-400 group transition-all">
+                <div class="bg-orange-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-orange-500">
+                    <i class="fas fa-layer-group text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-slate-800">단어 마스터</h3>
+                <div class="bg-orange-50 text-orange-600 text-sm px-3 py-1 rounded-full inline-block mb-4">클래스카드</div>
+                <p class="text-gray-500 leading-relaxed">오늘 배울 단어들을 게임처럼 암기해 보세요! 랭킹 1위를 노려봐!</p>
+            </a>
+
+            <!-- Google Classroom -->
+            <a href="https://classroom.google.com/" target="_blank" class="card-pop bg-white rounded-[2.5rem] p-8 shadow-xl border-t-8 border-emerald-400 group transition-all">
+                <div class="bg-emerald-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-emerald-500">
+                    <i class="fas fa-clipboard-list text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-slate-800">수행평가 & 자료</h3>
+                <div class="bg-emerald-50 text-emerald-600 text-sm px-3 py-1 rounded-full inline-block mb-4">구글 클래스룸</div>
+                <p class="text-gray-500 leading-relaxed">수업 자료와 과제 제출은 이곳에서! 공지사항도 꼭 확인해 줘요.</p>
+            </a>
+
+            <!-- Blooket -->
+            <a href="https://www.blooket.com/" target="_blank" class="card-pop bg-white rounded-[2.5rem] p-8 shadow-xl border-t-8 border-purple-400 group transition-all">
+                <div class="bg-purple-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-purple-500">
+                    <i class="fas fa-ghost text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-slate-800">복습 게임</h3>
+                <div class="bg-purple-50 text-purple-600 text-sm px-3 py-1 rounded-full inline-block mb-4">Blooket</div>
+                <p class="text-gray-500 leading-relaxed">문법과 독해 복습은 Blooket으로 신나게! 승자는 과연 누구?</p>
+            </a>
+
+            <!-- Textbook -->
+            <div id="learning" class="card-pop bg-white rounded-[2.5rem] p-8 shadow-xl border-t-8 border-sky-400 group transition-all">
+                <div class="bg-sky-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-sky-500">
+                    <i class="fas fa-book text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-slate-800">동아(윤) 교과서</h3>
+                <div class="bg-sky-50 text-sky-600 text-sm px-3 py-1 rounded-full inline-block mb-4">Textbook 3</div>
+                <p class="text-gray-500 leading-relaxed">3학년의 핵심! 주요 본문과 필수 문법 포인트를 완벽 정리해요.</p>
+            </div>
+        </div>
+
+        <!-- Section: Teacher's Message -->
+        <section id="rules" class="mt-24 relative">
+            <div class="bg-white rounded-[3rem] p-8 md:p-16 shadow-lg border-2 border-dashed border-sky-200">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <!-- Teacher Character Mockup -->
+                    <div class="w-64 h-64 bg-sky-50 rounded-full flex items-center justify-center relative shadow-inner">
+                        <i class="fas fa-smile-beam text-9xl text-sky-400 swimming"></i>
+                        <div class="absolute -top-2 -right-2 bg-yellow-400 text-white p-4 rounded-2xl rotate-12 font-bold shadow-md">
+                            Hello! 👋
+                        </div>
+                    </div>
+                    
+                    <div class="flex-1">
+                        <h2 class="text-5xl font-pen mb-8 text-sky-600 underline decoration-yellow-300 decoration-wavy">오션중 영어교실 이용 가이드! ✨</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xl">
+                            <div class="flex items-center gap-4 bg-sky-50 p-4 rounded-2xl">
+                                <span class="text-3xl">💡</span>
+                                <span>매일 10분 클래스카드 단어 암기!</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-yellow-50 p-4 rounded-2xl">
+                                <span class="text-3xl">📅</span>
+                                <span>구글 클래스룸 과제 기한 지키기!</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-pink-50 p-4 rounded-2xl">
+                                <span class="text-3xl">🎮</span>
+                                <span>Blooket 게임은 매너 있게 참여!</span>
+                            </div>
+                            <div class="flex items-center gap-4 bg-purple-50 p-4 rounded-2xl">
+                                <span class="text-3xl">🗣️</span>
+                                <span>틀려도 괜찮아! 영어로 당당하게!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Footer -->
+        <footer class="mt-32 text-center">
+            <div class="inline-block bg-sky-100 px-6 py-2 rounded-full text-sky-600 font-bold mb-6">
+                📍 Ocean Middle School - Room 303
+            </div>
+            <p class="text-gray-400">© 2024 선생님의 영어 보물섬. All rights reserved.</p>
+            <div class="flex justify-center gap-6 mt-8 opacity-30 text-3xl">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-sun"></i>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Bubbles Background Effect -->
+    <script>
+        function createBubble() {
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            const size = Math.random() * 20 + 10 + 'px';
+            bubble.style.width = size;
+            bubble.style.height = size;
+            bubble.style.left = Math.random() * 100 + 'vw';
+            bubble.style.top = (window.scrollY + window.innerHeight) + 'px';
+            
+            document.body.appendChild(bubble);
+            
+            let pos = window.scrollY + window.innerHeight;
+            const speed = Math.random() * 2 + 1;
+            
+            function move() {
+                pos -= speed;
+                bubble.style.top = pos + 'px';
+                if (pos > window.scrollY - 100) {
+                    requestAnimationFrame(move);
+                } else {
+                    bubble.remove();
+                }
+            }
+            move();
+        }
+        
+        setInterval(createBubble, 1000);
+    </script>
+
+</body>
+</html>
